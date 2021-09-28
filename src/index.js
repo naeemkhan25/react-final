@@ -1,14 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+  function Welcome() {
+  return <h1>Hello khan</h1>;
+}
+
+class Clock extends React.Component{
+
+  render(){
+  return (
+    <div>{this.props.children}{new Date().toLocaleTimeString(this.props.name)}</div>
+ );
+  }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+   <Clock name='bn-BD'><Welcome /></Clock>,
   document.getElementById('root')
+);
+ReactDOM.render(
+   <Clock name='en-BD'/>,
+  document.getElementById('root2')
 );
 
 // If you want to start measuring performance in your app, pass a function
