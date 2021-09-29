@@ -1,11 +1,5 @@
-//8th class code for
  import React from 'react';
 import Click from './Click';
-function Welcome(props) {
- return (
-    <h2>{new Date().toLocaleTimeString(props.name)}</h2>
- );
-}
  function Wellcome(){
    return (
        <div>Hello world</div>
@@ -28,14 +22,29 @@ class Clock extends React.Component{
   }
 
   render(){
-    console.log('clock componenet rendered');
     const {date,locale} = this.state;
+    // let button;
+    // if(locale==='bn-BD')
+    // {
+    //  button =(
+    //     <Click change={this.handelClocks} locale="en-US"></Click>
+    //  );  
+    // }else{
+    //    button =(
+    //     <Click change={this.handelClocks} locale="bn-BD"></Click>
+    //  );  
+    // }
   return (
     <div>
     <h2><Wellcome />{date.toLocaleTimeString(locale)}</h2>
     {/* <button  onClick={this.handelClocks.bind(this,'en-US')}>click here</button> */}
       {/* <button  onClick={()=>this.handelClocks('en-US')}>click here</button> */}
-       <Click change={this.handelClocks} local="en-US"></Click>
+      {/* {button} */}
+      { locale==='bn-BD'?(
+         <Click change={this.handelClocks} locale="en-US"></Click>
+      ):(
+       <Click change={this.handelClocks} locale="bn-BD"></Click>
+      )}
     </div>
  );
   }

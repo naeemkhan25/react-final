@@ -1,7 +1,10 @@
+import Clock from "./components/Clock";
+
 function App() {
+
   return (
     <div>
-      naeem khan
+     <Clock locale="en-BD"></Clock>
     </div>
   );
 }
