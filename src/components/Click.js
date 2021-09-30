@@ -11,11 +11,14 @@ class Click extends React.Component {
     }
 render(){
     
-    const {change,locale}=this.props;
+    const {change,locale,Show}=this.props;
     return (
+        <div>
         <button  onClick={()=>change(locale)}>
-            {locale==='bn-BD'?'English':'Bangla'}
+            {locale==='bn-BD'?'Bangla':'English'}
         </button>
+        {Show && <p>hello world</p>}
+        </div>
     );
 }
 }

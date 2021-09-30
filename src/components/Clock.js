@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import Click from './Click';
  function Wellcome(){
    return (
@@ -34,6 +34,7 @@ class Clock extends React.Component{
     //     <Click change={this.handelClocks} locale="bn-BD"></Click>
     //  );  
     // }
+    
   return (
     <div>
     <h2><Wellcome />{date.toLocaleTimeString(locale)}</h2>
@@ -41,10 +42,11 @@ class Clock extends React.Component{
       {/* <button  onClick={()=>this.handelClocks('en-US')}>click here</button> */}
       {/* {button} */}
       { locale==='bn-BD'?(
-         <Click change={this.handelClocks} locale="en-US"></Click>
+         <Click change={this.handelClocks} locale="en-US" Show={false}></Click>
       ):(
-       <Click change={this.handelClocks} locale="bn-BD"></Click>
+       <Click change={this.handelClocks} locale="bn-BD" Show={true}></Click>
       )}
+      
     </div>
  );
   }
