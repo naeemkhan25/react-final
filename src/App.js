@@ -1,14 +1,14 @@
-// import ClockList from "./components/clockList";
 
-import Form from "./components/Form";
+import ClickCount from './classfourth/ClickCount';
+import Counters from './classfourth/Counters';
+import OnHoverCounter from './classfourth/OnHoverCounter';
 function App() {
-// let looping =[1,2,3];
-  return (
-    <div>
-      {/* <ClockList looping={looping} /> */}
-      <Form />
-    </div>
-  );
+    return (
+        <div className="app">
+          <Counters>{(count, IncrementCounter)=>(<ClickCount count={count} IncrementCounter={IncrementCounter}/>)}</Counters>
+            <Counters>{(count, IncrementCounter)=>(<OnHoverCounter count={count} IncrementCounter={IncrementCounter}/>)}</Counters> 
+        </div>
+    );
 }
 
 export default App;
