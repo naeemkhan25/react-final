@@ -1,31 +1,18 @@
-import React from 'react';
-import ClickCount from './classfourth/ClickCount';
-import Counters from './classfourth/Counters';
-import ThemeContext from './classSixth/context/ThemeContext';
-import Section from './classSixth/Section';
-export default class App extends React.Component{
-    state={
-     Theme:"dark"
-    }
-    swithTheme=()=>{
-      this.setState(({ Theme }) => {
-                if (Theme === 'dark') {
-                    return {
-                        Theme: 'light',
-                    };
-                }
-                return {
-                    Theme: 'dark',
-                };
-            });
-    };
-    render() {
-       const{ Theme}=this.state;
+// import Count from './Hook/firstClass/Count';
+import { useState } from "react";
+import Effect from "./Hook/firstClass/useEffect/Effect";
+export default function App(){
+         const [show,setShow]=useState(true);
+
         return (
         <div className="app">
-          <Counters>{(count, IncrementCounter)=>(<ClickCount count={count} IncrementCounter={IncrementCounter}/>)}</Counters>
-          <ThemeContext.Provider value={{Theme,swithTheme:this.swithTheme}}><Section /></ThemeContext.Provider>
+            
+           <div>{show &&<Effect />}</div>
+           <button onClick={()=>{
+               setShow((prevState)=>!prevState);
+           }} type="button"> {show?"hide Post":'Show post'}</button>
+          
         </div>   
     );
-    }
+    
 }
