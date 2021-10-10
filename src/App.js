@@ -1,10 +1,11 @@
-import Resize from './customHook/Resize';
-export default function App(){
-        return (
-        <div className="app">
-            <Resize />
-        </div> 
-        
+import './assets/global.css';
+import Logo from './component/Logo';
+
+export default function App() {
+    return (
+        <div className="App">
+            <h1>Learn with Sumit</h1>
+            <Logo />
+        </div>
     );
-    
 }
