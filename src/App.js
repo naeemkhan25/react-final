@@ -1,11 +1,13 @@
-import './assets/global.css';
-import Logo from './component/Logo';
+// import './assets/class26/dark.css';
+import GlobalStyle from './class26/styles/Global.styles';
+import Tutorial from './class26/Tutorial';
 
 export default function App() {
     return (
-        <div className="App">
-            <h1>Learn with Sumit</h1>
-            <Logo />
-        </div>
-    );
+    <>
+    <GlobalStyle />
+    <Tutorial />
+    </>
+    )
+
 }

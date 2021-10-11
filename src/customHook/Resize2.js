@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Resize(){
+export default function Resize2(){
  const [onSmallScreen,setOnSmallScreen]=useState(false);
 
   const checkRezise=()=>{
